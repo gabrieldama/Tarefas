@@ -4,7 +4,6 @@ import com.tarefas.dto.TarefaRequest;
 import com.tarefas.model.Tarefa;
 import com.tarefas.service.TarefaService;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.tags.Tags;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +20,7 @@ public class TarefaController {
 
     @PostMapping("/Cadastrar")
     public Tarefa criar(@RequestBody TarefaRequest body){
-        return tarefaService.agendar(body.usuarioId(), body.categoriaId());
+        return tarefaService.criar(body.usuarioId(), body.categoriaId());
     }
 
     @GetMapping("/Listar")

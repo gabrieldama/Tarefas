@@ -35,17 +35,17 @@ src/main/java/com/concessionaria
 - /api/tarefas/Atualizar/{id} - atualiza a tarefa (put)
 - /api/tarefas/Excluir/{id} - exclui a tarefa  (delete)
 
-### Tarefa (`/api/categoria`)
-- /api/tarefas/Cadastrar - cadastra nova categoria (post)
-- /api/tarefas/Listar - lista todas as categorias (get)
-- /api/tarefas/Listar/{id} - busca pelo id da categoria (get)
-- /api/tarefas/Atualizar/{id} - atualiza a categoria (put)
-- /api/tarefas/Excluir/{id} - exclui a categoria (delete)
+### Categoria (`/api/categoria`)
+- /api/categoria/Cadastrar - cadastra nova categoria (post)
+- /api/categoria/Listar - lista todas as categorias (get)
+- /api/categoria/Listar/{id} - busca pelo id da categoria (get)
+- /api/categoria/Atualizar/{id} - atualiza a categoria (put)
+- /api/categoria/Excluir/{id} - exclui a categoria (delete)
 
-### Tarefa (`/api/usuario`)
-- /api/tarefas/Cadastrar - cadastra novo usuario (post)
-- /api/tarefas/Listar - lista todos os usuarios (get)
-- /api/tarefas/Listar/{id} - busca pelo id do usuario (get)
+### Usuario (`/api/usuario`)
+- /api/usuario/Cadastrar - cadastra novo usuario (post)
+- /api/usuario/Listar - lista todos os usuarios (get)
+- /api/usuario/Listar/{id} - busca pelo id do usuario (get)
 
 ## Contribuições
 

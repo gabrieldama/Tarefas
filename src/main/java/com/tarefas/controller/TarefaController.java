@@ -3,6 +3,8 @@ package com.tarefas.controller;
 import com.tarefas.dto.TarefaRequest;
 import com.tarefas.model.Tarefa;
 import com.tarefas.service.TarefaService;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import io.swagger.v3.oas.annotations.tags.Tags;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,17 +13,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/tarefas")
+@Tag(name = "Tarefa")
 public class TarefaController {
 
     @Autowired
     private TarefaService tarefaService;
 
-    @PostMapping
+    @PostMapping("/Cadastrar")
     public Tarefa criar(@RequestBody TarefaRequest body){
         return tarefaService.agendar(body.usuarioId(), body.categoriaId());
     }
 
-    @GetMapping("/listar")
+    @GetMapping("/Listar")
     public List<Tarefa> listar(){
         return tarefaService.listar();
     }
@@ -30,7 +33,7 @@ public class TarefaController {
     public Tarefa buscarPorId(@PathVariable Long id){
         return tarefaService.buscarPorId(id);
     }
-    @PutMapping
+    @PutMapping("/Atualizar/{id}")
     public Tarefa atualizar(@PathVariable Long id, @Valid @RequestBody TarefaRequest novo){
         return tarefaService.atualizar(id, novo);
     }

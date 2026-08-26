@@ -19,15 +19,15 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @GetMapping
+    @GetMapping("/Listar")
     public List<Usuario> listarTodos() {
         return usuarioService.listar();
     }
-    @GetMapping("/{id}")
+    @GetMapping("/Listar/{id}")
     public Usuario buscarPorId(Long id) {
         return usuarioService.buscarPorId(id);
     }
-    @PostMapping
+    @PostMapping("/Cadastrar")
     public Usuario salvar(Usuario usuario) {
         return usuarioService.save(usuario);
     }

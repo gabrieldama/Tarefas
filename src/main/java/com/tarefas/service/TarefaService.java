@@ -50,7 +50,7 @@ public class TarefaService {
         return tarefaRepository.findAll();
     }
 
-    public Tarefa agendar(Long usuarioId, Long categoriaId){
+    public Tarefa criar(Long usuarioId, Long categoriaId){
 
         Usuario usuarioQueVeioDoBanco = usuarioService.buscarPorId(usuarioId);
         Categoria categoriaQueVeioDoBanco = categoriaService.buscarPorId(categoriaId);
